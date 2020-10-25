@@ -13,6 +13,7 @@ import reducers from "./reducers";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 const store = createStore(reducers, composeEnhancers());
+window.store = store;
 
 const Root = ({ store }) => (
   <Provider store={store}>
