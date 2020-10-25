@@ -19,7 +19,7 @@ class Container extends Component {
    *
    */
   btnsubmit = (groupObj) => {
-    const data = "Hello";
+    const data = "Module2";
     this.props.dispatch({
       type: "SET_VAL",
       data,
@@ -29,7 +29,9 @@ class Container extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.btnsubmit}> Click Handler</button>
+        <br />
+        <h2>Module2</h2>
+        <button onClick={this.btnsubmit}> Click Handler </button>
       </div>
     );
   }
@@ -41,4 +43,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(Container);
+export default connect(
+  mapStateToProps,
+  null
+)(Container);
